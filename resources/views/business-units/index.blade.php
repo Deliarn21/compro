@@ -16,7 +16,7 @@
         <div class="hsnr-shell">
             <div class="hsnr-grid hsnr-grid--3">
                 @foreach ($businessUnits as $unit)
-                    <article id="hsnr-sbu-{{ $unit->slug }}" class="hsnr-card hsnr-sbu-card hsnr-sbu-card--{{ $unit->slug }}" style="--hsnr-accent: {{ $unit->extraValue('accent', '#0f766e') }};" data-reveal>
+                    <article id="hsnr-sbu-{{ $unit->slug }}" class="hsnr-card hsnr-sbu-card hsnr-sbu-card--{{ $unit->slug }}" style="--hsnr-accent: {{ $unit->extraValue('accent', '#144f91') }};" data-reveal>
                         <p class="hsnr-card__label">{{ $unit->title }}</p>
                         <h2>{{ $unit->subtitle }}</h2>
                         <p>{{ $unit->summary }}</p>

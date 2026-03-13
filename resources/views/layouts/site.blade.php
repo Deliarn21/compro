@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('meta_title', 'Hasnur Group')</title>
     <meta name="description" content="@yield('meta_description', 'Corporate website for Hasnur Group.')">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/hasnur.css') }}">
     <script defer src="{{ asset('assets/js/hasnur.js') }}"></script>
 </head>

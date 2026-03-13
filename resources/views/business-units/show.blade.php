@@ -4,7 +4,7 @@
 @section('meta_description', $businessUnit->summary)
 
 @section('content')
-    <section class="hsnr-page-hero" style="--hsnr-accent: {{ $businessUnit->extraValue('accent', '#0f766e') }};">
+    <section class="hsnr-page-hero" style="--hsnr-accent: {{ $businessUnit->extraValue('accent', '#144f91') }};">
         <div class="hsnr-shell hsnr-grid hsnr-grid--2">
             <div>
                 <p class="hsnr-eyebrow">Strategic Business Unit</p>

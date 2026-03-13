@@ -69,7 +69,7 @@
             </div>
             <div class="hsnr-grid hsnr-grid--3">
                 @foreach ($businessUnits as $unit)
-                    <article id="hsnr-sbu-{{ $unit->slug }}" class="hsnr-card hsnr-sbu-card hsnr-sbu-card--{{ $unit->slug }}" style="--hsnr-accent: {{ $unit->extraValue('accent', '#0f766e') }};" data-reveal>
+                    <article id="hsnr-sbu-{{ $unit->slug }}" class="hsnr-card hsnr-sbu-card hsnr-sbu-card--{{ $unit->slug }}" style="--hsnr-accent: {{ $unit->extraValue('accent', '#144f91') }};" data-reveal>
                         <p class="hsnr-card__label">{{ $unit->title }}</p>
                         <h3>{{ $unit->subtitle }}</h3>
                         <p>{{ $unit->summary }}</p>
