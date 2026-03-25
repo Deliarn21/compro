@@ -217,7 +217,7 @@ p {
     font-size: 0.92rem;
     font-weight: 600;
     color: rgba(var(--hsnr-blue-dark-rgb), 0.78);
-    transition: color 0.28s ease, background-color 0.28s ease, transform 0.28s ease;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .hsnr-nav a::after {
@@ -230,17 +230,14 @@ p {
     transform: scaleX(0);
     transform-origin: center;
     background: var(--hsnr-blue);
-    transition: transform 0.24s ease;
 }
 
 .hsnr-nav a:hover,
 .hsnr-nav a.is-active {
     color: var(--hsnr-blue-dark);
-    background: rgba(var(--hsnr-blue-rgb), 0.08);
-    transform: translateY(-1px);
+    background: rgba(var(--hsnr-blue-rgb), 0.14);
 }
 
-.hsnr-nav a:hover::after,
 .hsnr-nav a.is-active::after {
     transform: scaleX(1);
 }
@@ -384,27 +381,23 @@ p {
     font-weight: 700;
     letter-spacing: 0.02em;
     cursor: pointer;
-    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     box-shadow: 0 16px 34px rgba(var(--hsnr-blue-rgb), 0.24);
 }
 
 .hsnr-button::before {
-    content: "";
-    position: absolute;
-    inset: 1px;
-    border-radius: inherit;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
-    transform: translateX(-110%);
-    z-index: -1;
+    content: none;
 }
 
 .hsnr-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 20px 42px rgba(var(--hsnr-blue-rgb), 0.3);
+    background: linear-gradient(135deg, var(--hsnr-blue-deep), var(--hsnr-blue-dark));
+    border-color: rgba(var(--hsnr-blue-dark-rgb), 0.34);
 }
 
-.hsnr-button:hover::before {
-    animation: hsnrSweep 1.2s ease;
+.hsnr-button--ghost:hover {
+    background: rgba(var(--hsnr-blue-rgb), 0.12);
+    color: var(--hsnr-blue-dark);
+    border-color: rgba(var(--hsnr-blue-rgb), 0.28);
 }
 
 .hsnr-button--ghost {
@@ -465,7 +458,7 @@ p {
     background: rgba(255, 255, 255, 0.92);
     border: 1px solid var(--hsnr-line);
     box-shadow: var(--hsnr-shadow);
-    transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .hsnr-card::before,
@@ -496,9 +489,13 @@ p {
 .hsnr-card:hover,
 .hsnr-panel:hover,
 .hsnr-login-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--hsnr-shadow-hover);
     border-color: var(--hsnr-line-strong);
+}
+
+.hsnr-card:not(.hsnr-card--glass):not(.hsnr-card--accent):hover,
+.hsnr-panel:hover,
+.hsnr-login-card:hover {
+    background: rgba(244, 248, 253, 0.98);
 }
 
 .hsnr-card h2,
@@ -760,11 +757,13 @@ p {
     border: 1px solid rgba(var(--hsnr-blue-rgb), 0.14);
     background: rgba(255, 255, 255, 0.82);
     font-weight: 700;
-    transition: transform 0.28s ease, background-color 0.28s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .hsnr-filter-row a:hover {
-    transform: translateY(-1px);
+    border-color: rgba(var(--hsnr-blue-rgb), 0.32);
+    background: rgba(var(--hsnr-blue-rgb), 0.1);
+    color: var(--hsnr-blue-dark);
 }
 
 .hsnr-filter-row a.is-active {
@@ -928,8 +927,8 @@ p {
 
 .hsnr-admin__nav a.is-active,
 .hsnr-admin__nav a:hover {
-    border-color: rgba(255, 255, 255, 0.18);
-    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.14);
     color: var(--hsnr-white);
 }
 
@@ -941,7 +940,8 @@ p {
 }
 
 .hsnr-admin__sidebar .hsnr-button--ghost:hover {
-    background: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.24);
 }
 
 .hsnr-admin__content {
